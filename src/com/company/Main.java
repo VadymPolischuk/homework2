@@ -147,20 +147,22 @@ public class Main {
         double c = 0;
         System.out.println("Введите стоимость покупки ");
         sum = scanner.nextInt();
-        if (sum > 500) {
-            c = sum * 0.97;
-            System.out.println("Стоимость покупки с учетом скидки 3% составляет "+ c);
+        if (sum > 1000) {
+            c = sum * 0.95;
+            System.out.println("Стоимость покупки с учетом скидки 5% составляет: " + c);
         }
-            if(sum > 1000) {
-                c = sum * 0.95;
-                System.out.println("Стоимость покупки с учетом скидки 5% составляет  "+ c);
+        else
+            if (sum > 500) {
+                c = sum * 0.97;
+                System.out.println("Стоимость покупки с учетом скидки 3% составляет: " + c);
             }
-                if (sum <= 500 || sum == 0)
-                    System.out.println("Введено неверное значение");
-
-
-
+            else
+                if (sum <= 500 && sum > 0)
+                    System.out.println("Скидки нет! Стоимость покупки составляет: " + sum);
+                else
+                    System.out.println("Введено некорректное значение суммы покупки!");
     }
+    
     private static void second() {
         Scanner scanner = new Scanner(System.in);
         int a;
