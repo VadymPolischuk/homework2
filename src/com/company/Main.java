@@ -34,13 +34,10 @@ public class Main {
         else {
             x = 0;
             System.out.println("X = " + x);
-
         }
-
-
     }
+    
     private static void ninth() {
-
         double x = 523.234,y = 224.342;
         double sum;
         double op;
@@ -58,9 +55,8 @@ public class Main {
         }
 
         System.out.println("X =" + x + "\t" + "Y = " + y);
-
-
     }
+    
     private static void eighth() {
         int number = 100;
         int sum;
@@ -72,22 +68,21 @@ public class Main {
         sum = (int) Math.pow(ones,3) + (int) Math.pow(decimals,3) + (int) Math.pow(hundreds,3);
         q=(int) Math.pow(number,3);
         System.out.println((sum==q) ? "Равны" : "Не равны");
-
-
     }
+    
     private static void seventh() {
-
-        int number = 462;
+        int number = (int)(Math.random()*1000);
+        System.out.println(number);
         int hundreds = 0, decimals = 0, ones = 0;
         ones = number%10;
         decimals = number/10%10;
         hundreds = number/100%10;
-        System.out.println(ones > hundreds);
-        System.out.println(decimals > hundreds);
-        System.out.println(ones > decimals);
-
-
+        System.out.println(ones > hundreds ? "Последняя цифра больше первой" : (ones < hundreds ? "Первая цифра больше последней" : "Первая цифра равна последней"));
+        System.out.println(decimals > hundreds ? "Вторая цифра больше первой" : (decimals < hundreds ? "Первая цифра больше второй" : "Первая цифра равна второй"));
+        System.out.println(ones < decimals ? "Вторая цифра больше последней" : (ones > decimals ? "Последняя цифра больше второй" : "Последняя цифра равна второй"));
+        System.out.println();
     }
+    
     private static void sixth() {
         Scanner scanner = new Scanner(System.in);
         int dur,num;
@@ -127,43 +122,25 @@ public class Main {
 
             default:
                 System.out.println("Введен несуществующий день недели");
-
         }
-
-
-
-
-
-
-
     }
+    
     private static void fifth() {
         Scanner scanner = new Scanner (System.in);
         int a;
         System.out.println("Введите значение a ");
         a = scanner.nextInt();
         System.out.println(((a%3)==0) ? "Значение делится нацело на три" : "Значение не делится нацело на три");
-
-
-
-
-
     }
+    
     private static void fourth() {
         Scanner scanner = new Scanner (System.in);
         int a;
         System.out.println("Введите значение a ");
         a = scanner.nextInt();
         System.out.println(((a%2)==0) ? "Значение четное" : "Значение не является четным");
-
-
-
-
-
-
-
-
     }
+    
     private static void third() {
         Scanner scanner = new Scanner(System.in);
         int sum;
@@ -194,17 +171,14 @@ public class Main {
             System.out.println("Ответ верный ");
         else
             System.out.println("Вы ошиблись, Одесса была основана в 1794 году.");
-
-
-
     }
+    
     private static void first() {
         Scanner scanner = new Scanner(System.in);
 
         int a;
         int b;
         double c;
-
 
         System.out.println("Введите значение a");
         a = scanner.nextInt();
@@ -213,12 +187,8 @@ public class Main {
 
         if(b != 0)
         {
-
            c = a/b;
             System.out.println("Решение = " + c);
-
-
-
         }
         else
         {
